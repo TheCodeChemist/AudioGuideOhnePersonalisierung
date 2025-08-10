@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Audioguide Prototyp ohne Personalisierung</title>
+  </head>
+
+  <body>
+    <!-- Hauptüberschrift der Seite -->
+    <h1>Audioguide Prototyp ohne Personalisierung</h1>
+
+    <!-- Button für einen einfachen Backend-Ping -->
+    <button id="pingButton">Teste Verbindung zum Backend</button>
+
+    <!-- Hier landet die Text-Antwort vom Backend-Ping -->
+    <p id="responseOutput"></p>
+
+    <!-- Bereich für Nutzer-Feedback/Meldungen -->
+    <p id="feedback"></p>
+
+    <hr />
+
+    <!-- Live-Standort-Bereich -->
+    <h2>Live-Standort</h2>
+
+    <!-- Anzeige des Ortsnamens (ggf. reverse geocoding) -->
+    <p id="ortAnzeige">📍 Aktueller Ort: …</p>
+
+    <!-- Status-Meldung zum GPS bzw. Geolocation-API -->
+    <p id="gpsStatus">Starte Standort-Tracking …</p>
+
+    <!-- Roh-Koordinaten-Ausgabe (Lat/Lon) -->
+    <p id="liveCoords">Kein Standort verfügbar.</p>
+
+    <div id="poiListeWrapper">
+      <h3>POIs in deiner Nähe:</h3>
+      <p id="infoHinweis">ℹ️ Für mehr Infos auf einen POI klicken:</p>
+      <ul id="poiListe"></ul>
+    </div>
+
+    <!-- Antwort-/Detailbereich, in dem Beschreibungen/Antworten der KI erscheinen -->
+    <div id="antwortBereich" style="margin-top: 1em;"></div>
+
+    <!-- JavaScript-Datei; 'defer' sorgt dafür, dass das Skript nach dem Parsen des HTMLs läuft -->
+    <script src="script.js" defer></script>
+  </body>
+</html>
+

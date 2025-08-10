@@ -1,0 +1,19 @@
+# Verhindert, dass sensible Dateien ins Repo kommen
+
+
+# Python-Standard
+__pycache__/
+*.pyc
+
+# Virtuelle Umgebung
+venv/
+.env/
+
+# Umgebungsvariablen-Dateien
+.env
+*.env
+
+# Sonstige sensible oder lokale Dateien
+.pdf
+*.pdf
+
