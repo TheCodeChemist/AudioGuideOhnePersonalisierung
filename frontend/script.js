@@ -1,3 +1,5 @@
+// Stand 11.09.2025, Weindok
+
 let aktuellerOrt = "Unbekannt";
 let aktuellerPOIKey = null;
 let chatThreads = {}; // Objekt: { 'POI-Name|Ort': [ {role: ..., content: ...}, ... ] }

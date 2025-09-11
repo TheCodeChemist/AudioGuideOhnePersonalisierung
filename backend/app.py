@@ -1,3 +1,5 @@
+# Stand: 11.09.2025, Weindok
+
 import os
 import requests
 import re
