@@ -1,46 +1,51 @@
 <!-- Stand 11.09.2025, Weindok-->
 
 <!DOCTYPE html>
+<!-- Sprache: DE-->
 <html lang="de">
+  <!-- Tab-Überschrift-->
   <head>
     <meta charset="UTF-8" />
+    <!-- HINWEIS: Zur Evaluierung lautet die Überschrift im Tab "Audioguide Prototyp 1"-->
     <title>Audioguide Prototyp ohne Personalisierung</title>
   </head>
 
   <body>
-    <!-- Hauptüberschrift der Seite -->
+    <!-- Hauptüberschrift der Seite, HINWEIS: Zur Evaluierung lautet die Überschrift "Audioguide Prototyp 1" -->
     <h1>Audioguide Prototyp ohne Personalisierung</h1>
 
     <!-- Button für einen einfachen Backend-Ping -->
     <button id="pingButton">Teste Verbindung zum Backend</button>
 
-    <!-- Hier landet die Text-Antwort vom Backend-Ping -->
+    <!-- Text-Antwort vom Backend-Ping -->
     <p id="responseOutput"></p>
 
-    <!-- Bereich für Nutzer-Feedback/Meldungen -->
-    <p id="feedback"></p>
+
+    <!-- FAKE-BUTTON: wird nur angezeigt um bei Evaluierung keinen Unterschied im UI festzustellen -->
+    <button id="editButton">Interessen anpassen</button>
 
     <hr />
 
     <!-- Live-Standort-Bereich -->
     <h2>Live-Standort</h2>
 
-    <!-- Anzeige des Ortsnamens (ggf. reverse geocoding) -->
+    <!-- Anzeige Ortsname -->
     <p id="ortAnzeige">📍 Aktueller Ort: …</p>
 
-    <!-- Status-Meldung zum GPS bzw. Geolocation-API -->
+    <!-- Status-Meldung zu Geolocation-API -->
     <p id="gpsStatus">Starte Standort-Tracking …</p>
 
     <!-- Roh-Koordinaten-Ausgabe (Lat/Lon) -->
     <p id="liveCoords">Kein Standort verfügbar.</p>
 
+    <!-- Liste der POIs im Umkreis als Buttons -->
     <div id="poiListeWrapper">
       <h3>POIs in deiner Nähe:</h3>
       <p id="infoHinweis">ℹ️ Für mehr Infos auf einen POI klicken:</p>
       <ul id="poiListe"></ul>
     </div>
 
-    <!-- Antwort-/Detailbereich, in dem Beschreibungen/Antworten der KI erscheinen -->
+    <!-- Antwort-/Dialogbereich zwischen Nutzer und KI  -->
     <div id="antwortBereich" style="margin-top: 1em;"></div>
 
     <!-- JavaScript-Datei; 'defer' sorgt dafür, dass das Skript nach dem Parsen des HTMLs läuft -->
