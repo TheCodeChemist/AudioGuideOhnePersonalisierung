@@ -1,4 +1,4 @@
-// Stand 11.09.2025, Weindok
+// Stand 12.09.2025, Weindok
 
 let aktuellerOrt = "Unbekannt";
 let aktuellerPOIKey = null;
@@ -48,7 +48,10 @@ function berechneEntfernungMeter(lat1, lon1, lat2, lon2) {
 // END - function berechneEntfernungMeter
   
 
-// Anzeigen/Updates der POIs in der Nähe starten, sobald alles geladen ist
+/**Beim Laden: Geolocation prüfen und kontinuierlich tracken (watchPosition).
+ * Pro Positionsupdate: Koordinaten setzen/anzeigen, Ort & ggf. Wetter (Throttle) vom Backend holen,
+ * POIs abrufen, nach Entfernung aufbereiten/rendern (Primary + interessenbasierte Secondary), UI-Status aktualisieren; Fehlerfälle behandeln.
+*/
 window.addEventListener("load", () => {
   // Prüfen, ob der Brwoser die Geolocation-API unterstützt
   if ("geolocation" in navigator) {
